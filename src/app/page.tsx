@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import CustomCursor from "@/components/CustomCursor";
 import Hero from "@/components/Hero";
+import ImageMarquee from "@/components/ImageMarquee";
 import Thesis from "@/components/Thesis";
 import FlagshipEvent from "@/components/FlagshipEvent";
 import WingsWheelsWater from "@/components/WingsWheelsWater";
@@ -19,6 +20,7 @@ export default function Home() {
       <CustomCursor />
       <Navigation />
       <Hero />
+      <ImageMarquee />
       <Thesis />
       <FlagshipEvent />
       <WingsWheelsWater />
