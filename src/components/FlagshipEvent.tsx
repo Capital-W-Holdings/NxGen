@@ -62,7 +62,7 @@ export default function FlagshipEvent() {
             November 5–8, 2026
           </h2>
           <p className="text-lg text-text-soft leading-relaxed">
-            Three days. 100 curated attendees. Unbelievable experiences. Meaningful conversations. Lasting friendships.
+            Four days. 100 curated attendees. Unbelievable experiences. Meaningful conversations. Lasting friendships.
           </p>
         </div>
 
