@@ -4,17 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
+// Reordered to separate red car images (woman-ferrari, couple-ferrari) and add variety
 const galleryImages = [
   { src: "/images/www/marina-sunset.jpg", alt: "Marina at Sunset", title: "Water", category: "water" },
   { src: "/images/www/helicopter-arrival.jpg", alt: "Helicopter Arrival", title: "Wings", category: "wings" },
-  { src: "/images/www/collector-cars.jpg", alt: "Collector Cars on Tarmac", title: "Wheels", category: "wheels" },
-  { src: "/images/www/yacht-radiance.jpg", alt: "Yacht Radiance", title: "Water", category: "water" },
-  { src: "/images/www/helicopter-passengers.jpg", alt: "VIP Helicopter Arrival", title: "Wings", category: "wings" },
   { src: "/images/www/woman-ferrari.jpg", alt: "Elegance & Performance", title: "Wheels", category: "wheels" },
-  { src: "/images/www/couple-ferrari.jpg", alt: "Unforgettable Moments", title: "Experience", category: "experience" },
-  { src: "/images/www/bentley-helicopter.jpg", alt: "Bentley & Helicopter", title: "Wings & Wheels", category: "wings" },
-  { src: "/images/www/classic-speedboat.jpg", alt: "Classic Speedboat", title: "Water", category: "water" },
+  { src: "/images/www/yacht-radiance.jpg", alt: "Yacht Radiance", title: "Water", category: "water" },
   { src: "/images/www/live-performance.jpg", alt: "Live Performance", title: "Entertainment", category: "experience" },
+  { src: "/images/www/collector-cars.jpg", alt: "Collector Cars on Tarmac", title: "Wheels", category: "wheels" },
+  { src: "/images/www/helicopter-passengers.jpg", alt: "VIP Helicopter Arrival", title: "Wings", category: "wings" },
+  { src: "/images/www/couple-ferrari.jpg", alt: "Unforgettable Moments", title: "Experience", category: "experience" },
+  { src: "/images/www/classic-speedboat.jpg", alt: "Classic Speedboat", title: "Water", category: "water" },
+  { src: "/images/www/bentley-helicopter.jpg", alt: "Bentley & Helicopter", title: "Wings & Wheels", category: "wings" },
   { src: "/images/www/dock-sunset.jpg", alt: "Dock at Golden Hour", title: "Water", category: "water" },
   { src: "/images/www/couple-portrait.jpg", alt: "Connections Made", title: "Community", category: "experience" },
 ];

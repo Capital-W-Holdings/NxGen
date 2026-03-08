@@ -90,6 +90,6 @@ a, button {
 }
 
 .animate-marquee {
-  animation: marquee 40s linear infinite;
+  animation: marquee 80s linear infinite;
   transition: animation-duration 0.5s ease;
 }
