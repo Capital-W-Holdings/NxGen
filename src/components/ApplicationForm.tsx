@@ -135,7 +135,6 @@ export default function ApplicationForm() {
             <input
               type="url"
               required
-              placeholder="https://linkedin.com/in/yourprofile"
               value={formData.linkedin}
               onChange={(e) =>
                 setFormData({ ...formData, linkedin: e.target.value })
@@ -147,11 +146,10 @@ export default function ApplicationForm() {
           {/* Referred By */}
           <div>
             <label className="block text-sm text-text-muted mb-2">
-              Referred by?
+              Referred by? (optional)
             </label>
             <input
               type="text"
-              placeholder="Name of person who referred you (optional)"
               value={formData.referredBy}
               onChange={(e) =>
                 setFormData({ ...formData, referredBy: e.target.value })
