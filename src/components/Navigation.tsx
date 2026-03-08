@@ -36,34 +36,34 @@ export default function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex items-center justify-between h-24">
+          <div className="flex items-center justify-between h-28">
             {/* Logo */}
             <a href="#" className="flex items-center">
               <Image
                 src="/images/logo.png"
                 alt="NxGeN"
-                width={280}
-                height={78}
-                className="h-20 w-auto"
+                width={320}
+                height={90}
+                className="h-24 w-auto"
               />
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-12">
-              {navLinks.map((link) => (
+            <nav className="hidden md:flex items-center">
+              {navLinks.map((link, index) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`text-[11px] tracking-[0.25em] transition-colors font-light ${
+                  className={`text-[12px] tracking-[0.15em] transition-colors duration-300 font-light px-6 ${
                     link.highlight 
                       ? "text-blush hover:text-pearl" 
-                      : "text-pearl/50 hover:text-pearl"
+                      : "text-pearl/60 hover:text-pearl"
                   }`}
                 >
                   {link.name}
                 </a>
               ))}
-            </div>
+            </nav>
 
             {/* Mobile Menu Button */}
             <button
