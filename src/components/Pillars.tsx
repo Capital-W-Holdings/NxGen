@@ -72,12 +72,9 @@ export default function Pillars() {
         </div>
 
         {/* Pillars label */}
-        <p className="text-blush text-xs tracking-[0.3em] uppercase mb-8">
+        <p className="text-blush text-xs tracking-[0.3em] uppercase mb-12">
           Our Three Pillars
         </p>
-        <h3 className="text-2xl md:text-3xl text-pearl mb-12 font-bold">
-          Three ways to live it. One platform to experience it together.
-        </h3>
 
         {/* Pillars grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-pearl/5 rounded-xl overflow-hidden">
