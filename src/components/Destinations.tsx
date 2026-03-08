@@ -76,11 +76,11 @@ export default function Destinations() {
       className="relative py-32 bg-black overflow-hidden"
     >
       {/* Header */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-12 mb-16">
-        <p className="text-blush text-xs tracking-[0.3em] uppercase mb-6">
-          Global Community
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 mb-20">
+        <p className="text-blush/80 text-[11px] tracking-[0.4em] uppercase mb-8 font-light">
+          Where We Gather
         </p>
-        <p className="text-lg text-text-soft max-w-xl">
+        <p className="text-[1.05rem] text-pearl/50 max-w-2xl leading-[1.8] font-light">
           NxGeN doesn&apos;t end when you leave Miami. Members get year-round access to curated introductions, private markets and secondaries deal flow, AI and entrepreneurship education, global events, and a private network of next-gen leaders who actually have each other&apos;s backs.
         </p>
       </div>
@@ -101,7 +101,7 @@ export default function Destinations() {
               whileHover={{ scale: 1.02 }}
               className="flex-shrink-0 px-8 py-4 bg-black-light border border-pearl/10 rounded-full cursor-pointer hover:border-blush/30 hover:bg-black-mid transition-all duration-300"
             >
-              <span className="text-lg md:text-xl text-pearl-muted hover:text-pearl transition-colors">
+              <span className="text-[0.95rem] md:text-[1.05rem] text-pearl/50 hover:text-pearl/80 transition-colors font-light">
                 {dest}
               </span>
             </motion.div>
@@ -141,9 +141,9 @@ export default function Destinations() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-xl text-pearl font-medium">{dest.name}</h3>
-                  <p className="text-pearl/70 text-sm">{dest.subtitle}</p>
+                <div className="absolute bottom-5 left-5 right-5">
+                  <h3 className="text-[1.25rem] text-pearl font-serif font-light">{dest.name}</h3>
+                  <p className="text-pearl/50 text-[0.85rem] font-light">{dest.subtitle}</p>
                 </div>
               </div>
             </div>
@@ -152,8 +152,8 @@ export default function Destinations() {
       </div>
 
       {/* Quote */}
-      <div className="max-w-4xl mx-auto px-6 lg:px-12 mt-20 text-center">
-        <blockquote className="text-2xl md:text-3xl text-pearl leading-relaxed font-medium">
+      <div className="max-w-4xl mx-auto px-6 lg:px-12 mt-24 text-center">
+        <blockquote className="text-[1.5rem] md:text-[2rem] text-pearl/70 leading-[1.5] font-serif font-light italic">
           &ldquo;We&apos;re not building a network. We&apos;re building a global ecosystem that moves humanity forward for generations to come.&rdquo;
         </blockquote>
       </div>

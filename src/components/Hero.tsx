@@ -23,11 +23,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-[family-name:var(--font-playfair)] leading-[0.95] tracking-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-serif font-light leading-[0.95] tracking-[-0.02em]">
               <span className="text-pearl">The future</span>
               <br />
               <span className="text-pearl">is </span>
-              <span className="text-blush italic">written</span>
+              <span className="text-blush italic font-normal">written</span>
               <br />
               <span className="text-pearl">together.</span>
             </h1>
@@ -45,7 +45,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.6 }}
             className="flex-1 px-6 lg:px-12 xl:px-20 py-8 border-b md:border-b-0 md:border-r border-pearl/10"
           >
-            <p className="text-base md:text-lg text-pearl-muted max-w-md leading-relaxed">
+            <p className="text-[0.95rem] md:text-[1.05rem] text-pearl/50 max-w-md leading-[1.8] font-light">
               As AI reshapes what it means to build, NxGen gives you the community, resources, and education to stay ahead — and lead with purpose.
             </p>
           </motion.div>

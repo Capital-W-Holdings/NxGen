@@ -215,34 +215,34 @@ export default function WhoWeAre() {
 
           {/* Right side - Content */}
           <div className="order-1 lg:order-2">
-            <p className="text-blush text-xs tracking-[0.3em] uppercase mb-6">
-              Who We Are
+            <p className="text-blush/80 text-[11px] tracking-[0.4em] uppercase mb-8 font-light">
+              Global Community
             </p>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-pearl leading-tight mb-8 font-serif">
+            <h2 className="text-[2.25rem] md:text-[3rem] lg:text-[3.5rem] text-pearl leading-[1.1] mb-10 font-serif font-light tracking-[-0.02em]">
               A community of builders,
               <br />
-              givers & investors.
+              <span className="text-pearl/40">givers & investors.</span>
             </h2>
 
-            <p className="text-lg text-text-soft leading-relaxed mb-6">
+            <p className="text-[1.05rem] text-pearl/50 leading-[1.8] mb-6 font-light">
               NxGen isn&apos;t a network you attend. It&apos;s a community you belong to. We bring together people who are building the future of their industries, giving generously to lift others up, and investing in the people and ideas that matter most.
             </p>
 
-            <p className="text-lg text-text-soft leading-relaxed mb-10">
+            <p className="text-[1.05rem] text-pearl/50 leading-[1.8] mb-12 font-light">
               We keep our circles tight so that trust, generosity, and real connection can flourish — across cities, time zones, and industries.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <a
                 href="#apply"
-                className="px-8 py-4 text-xs tracking-[0.2em] text-black bg-blush hover:bg-pearl transition-all duration-300"
+                className="px-8 py-4 text-[11px] tracking-[0.2em] text-black bg-blush hover:bg-pearl transition-all duration-300 font-medium"
               >
                 APPLY FOR MEMBERSHIP
               </a>
               <a
                 href="#thesis"
-                className="px-8 py-4 text-xs tracking-[0.2em] text-pearl border border-pearl/30 hover:border-pearl/60 transition-all duration-300"
+                className="px-8 py-4 text-[11px] tracking-[0.2em] text-pearl/70 border border-pearl/20 hover:border-pearl/40 hover:text-pearl transition-all duration-300 font-light"
               >
                 LEARN MORE
               </a>
