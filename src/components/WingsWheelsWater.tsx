@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const experiences = [
@@ -23,38 +22,19 @@ const experiences = [
 ];
 
 export default function WingsWheelsWater() {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
-
   return (
-    <section id="www" ref={containerRef} className="relative bg-black overflow-hidden">
-      {/* Hero image section */}
-      <div className="relative h-[70vh] min-h-[500px]">
-        <Image
-          src="/images/www-hero.png"
-          alt="Wings Wheels & Water"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black" />
+    <section id="www" className="relative bg-black overflow-hidden">
+      {/* Hero section with solid dark background */}
+      <div className="relative h-[70vh] min-h-[500px] bg-black-light flex flex-col items-center justify-center text-center px-6">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-50" />
 
-        {/* Title overlay */}
-        <motion.div
-          style={{ y }}
-          className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
-        >
-          <p className="text-pearl/80 text-xs tracking-[0.3em] uppercase mb-6">
+        <div className="relative z-10">
+          <p className="text-pearl/60 text-xs tracking-[0.3em] uppercase mb-8">
             Opening Night · Thursday November 5
           </p>
           <h2
-            className="text-5xl md:text-7xl lg:text-8xl text-pearl uppercase tracking-wider"
+            className="text-5xl md:text-7xl lg:text-8xl text-pearl uppercase tracking-wider leading-tight"
             style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
           >
             Wings
@@ -63,7 +43,7 @@ export default function WingsWheelsWater() {
             <br />
             & Water
           </h2>
-        </motion.div>
+        </div>
       </div>
 
       {/* Content section */}

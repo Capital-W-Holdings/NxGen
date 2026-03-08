@@ -64,12 +64,12 @@ export default function Pillars() {
               </a>
             </div>
           </div>
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+          <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
             <Image
               src="/images/event-photo.jpg"
               alt="NxGeN Community"
               fill
-              className="object-cover"
+              className="object-cover object-top"
             />
           </div>
         </div>
