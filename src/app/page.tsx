@@ -9,7 +9,7 @@ import Pillars from "@/components/Pillars";
 import WhoWeAre from "@/components/WhoWeAre";
 import Destinations from "@/components/Destinations";
 
-import WhatYouGet from "@/components/WhatYouGet";
+
 import Process from "@/components/Process";
 import ApplicationForm from "@/components/ApplicationForm";
 import Footer from "@/components/Footer";
@@ -26,7 +26,6 @@ export default function Home() {
       <Pillars />
       <WhoWeAre />
       <Destinations />
-      <WhatYouGet />
       <Process />
       <ApplicationForm />
       <Footer />
