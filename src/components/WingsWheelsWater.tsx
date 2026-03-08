@@ -46,7 +46,7 @@ export default function WingsWheelsWater() {
   return (
     <section id="www" className="relative bg-black overflow-hidden">
       {/* Content section */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-8 pb-16 lg:pt-12 lg:pb-20">
         {/* Main two-column layout */}
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 mb-24">
           {/* Left side - Image reframed to show helicopter */}
@@ -117,7 +117,13 @@ export default function WingsWheelsWater() {
             width: 'max-content',
           }}
         >
-          {[...galleryImages, ...galleryImages, ...galleryImages, ...galleryImages].map((image, index) => (
+          {[...galleryImages, ...galleryImages, ...galleryImages, ...galleryImages].map((image, index) => {
+            // Use object-top for images with people to show their heads
+            const needsTopPosition = image.src.includes('live-performance') || 
+                                     image.src.includes('couple') || 
+                                     image.src.includes('woman-ferrari') ||
+                                     image.src.includes('helicopter-passengers');
+            return (
             <div
               key={`${image.src}-${index}`}
               className="flex-shrink-0 w-[280px] md:w-[350px] relative cursor-pointer group/card"
@@ -128,13 +134,14 @@ export default function WingsWheelsWater() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover/card:scale-105"
+                  className={`object-cover transition-transform duration-500 group-hover/card:scale-105 ${needsTopPosition ? 'object-top' : ''}`}
                 />
                 {/* Hover gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
-          ))}
+          );
+          })}
         </div>
       </div>
 

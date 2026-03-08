@@ -44,7 +44,7 @@ export default function FlagshipEvent() {
     <section
       id="miami"
       ref={containerRef}
-      className="relative pt-12 pb-20 bg-black-light"
+      className="relative pt-12 pb-8 bg-black-light"
     >
       {/* Top border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pearl/10 to-transparent" />
@@ -93,15 +93,7 @@ export default function FlagshipEvent() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <a
-            href="#apply"
-            className="inline-block px-10 py-4 text-xs tracking-[0.2em] text-pearl border border-pearl/20 rounded-full hover:border-blush hover:text-blush transition-all duration-300"
-          >
-            SECURE YOUR PLACE
-          </a>
-        </div>
+
       </motion.div>
     </section>
   );
