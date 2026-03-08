@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Instagram, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 const footerLinks = {
   community: [
@@ -36,15 +37,20 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-2">
-            <motion.h3
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-2xl mb-6"
-              style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
+              className="mb-6"
             >
-              NxGen
-            </motion.h3>
+              <Image
+                src="/images/logo.png"
+                alt="NxGeN"
+                width={120}
+                height={34}
+                className="h-8 w-auto"
+              />
+            </motion.div>
             <p className="text-text-soft text-sm leading-relaxed max-w-sm mb-8">
               A community of builders, givers, and investors leading the next generation of society - with purpose, generosity, and care.
             </p>

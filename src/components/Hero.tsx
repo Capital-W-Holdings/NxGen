@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -39,16 +40,22 @@ export default function Hero() {
           NOVEMBER 5–8, 2026 · MIAMI
         </motion.p>
 
-        {/* Main Title - Serif font like reference */}
-        <motion.h1
+        {/* Main Logo */}
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-7xl md:text-8xl lg:text-9xl text-pearl leading-none mb-8"
-          style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
+          className="mb-8"
         >
-          NxGen
-        </motion.h1>
+          <Image
+            src="/images/logo.png"
+            alt="NxGeN"
+            width={400}
+            height={112}
+            className="h-20 md:h-28 lg:h-36 w-auto mx-auto"
+            priority
+          />
+        </motion.div>
 
         {/* Horizontal line */}
         <motion.div

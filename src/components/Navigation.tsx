@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,9 +41,13 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <a href="#" className="flex items-center">
-              <span className="text-xl tracking-[0.2em] text-pearl font-light" style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}>
-                NxGen
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt="NxGeN"
+                width={100}
+                height={28}
+                className="h-7 w-auto"
+              />
             </a>
 
             {/* Desktop Navigation */}
