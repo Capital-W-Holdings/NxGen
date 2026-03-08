@@ -56,7 +56,7 @@ export default function Thesis() {
             viewport={{ once: true }}
           >
             <p className="text-[1.35rem] md:text-[1.75rem] text-pearl/70 leading-[1.6] max-w-3xl font-light">
-              <span className="text-blush font-normal">$84 trillion</span> is transferring to Millennials and Gen Z — and at the same moment, AI is creating the greatest wealth-building opportunity in modern history. <span className="font-bold text-pearl">It starts in Miami.</span>
+              <span className="text-blush font-normal">$84 trillion</span> is transferring to Millennials and Gen Z — and at the same moment, AI is creating the greatest wealth-building opportunity in modern history. <span className="font-bold text-pearl">It starts in Miami and continues globally.</span>
             </p>
           </motion.div>
         </motion.div>
