@@ -37,25 +37,6 @@ export default function WingsWheelsWater() {
 
   return (
     <section id="www" className="relative bg-black overflow-hidden">
-      {/* Hero section with solid dark background */}
-      <div className="relative h-[70vh] min-h-[500px] bg-black-light flex flex-col items-center justify-center text-center px-6">
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-50" />
-
-        <div className="relative z-10">
-          <p className="text-pearl/60 text-xs tracking-[0.3em] uppercase mb-8">
-            Opening Night · Thursday November 5
-          </p>
-          <h2 className="text-5xl md:text-7xl lg:text-8xl text-pearl uppercase tracking-wider leading-tight font-bold">
-            Wings
-            <br />
-            Wheels
-            <br />
-            & Water
-          </h2>
-        </div>
-      </div>
-
       {/* Content section */}
       <div className="max-w-6xl mx-auto px-6 lg:px-12 py-24">
         {/* Intro - Two column layout with image on left, copy on right */}
