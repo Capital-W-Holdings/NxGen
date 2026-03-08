@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Globe from "./Globe";
 
 export default function Hero() {
   return (
@@ -10,14 +9,7 @@ export default function Hero() {
       <div className="absolute top-20 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pearl/10 to-transparent" />
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col lg:flex-row">
-        {/* Left side - Globe */}
-        <div className="flex-1 relative hidden lg:block">
-          <Globe />
-        </div>
-
-        {/* Right side - Text */}
-        <div className="flex-1 flex flex-col justify-center px-6 lg:px-12 xl:px-20 py-16 lg:py-0">
+      <div className="flex-1 flex items-center justify-center px-6 lg:px-12 xl:px-20 py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -32,7 +24,6 @@ export default function Hero() {
               <span className="text-pearl">together.</span>
             </h1>
           </motion.div>
-        </div>
       </div>
 
       {/* Bottom section */}
