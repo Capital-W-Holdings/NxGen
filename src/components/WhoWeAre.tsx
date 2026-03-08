@@ -43,13 +43,13 @@ export default function WhoWeAre() {
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <a
                 href="#apply"
-                className="px-8 py-4 text-[11px] tracking-[0.2em] text-black bg-blush hover:bg-pearl transition-all duration-300 font-medium"
+                className="px-8 py-4 text-[11px] tracking-[0.2em] text-black bg-pearl hover:bg-blush transition-all duration-300 font-medium rounded-full"
               >
                 APPLY FOR MEMBERSHIP
               </a>
               <a
                 href="#thesis"
-                className="px-8 py-4 text-[11px] tracking-[0.2em] text-pearl/70 border border-pearl/20 hover:border-pearl/40 hover:text-pearl transition-all duration-300 font-light"
+                className="px-8 py-4 text-[11px] tracking-[0.2em] text-pearl/70 border border-pearl/20 hover:border-pearl/40 hover:text-pearl transition-all duration-300 font-light rounded-full"
               >
                 LEARN MORE
               </a>

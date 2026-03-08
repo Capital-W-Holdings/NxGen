@@ -55,7 +55,7 @@ export default function Pillars() {
             <div className="mt-8">
               <a
                 href="#apply"
-                className="inline-block px-8 py-3 text-xs tracking-[0.2em] text-pearl border border-pearl/20 rounded-full hover:border-blush hover:text-blush transition-all duration-300"
+                className="inline-block px-8 py-4 text-xs tracking-[0.2em] text-black bg-pearl hover:bg-blush rounded-full transition-all duration-300 font-medium"
               >
                 REQUEST AN INVITATION
               </a>
