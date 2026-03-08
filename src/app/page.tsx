@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import CustomCursor from "@/components/CustomCursor";
 import Hero from "@/components/Hero";
 import Thesis from "@/components/Thesis";
 import FlagshipEvent from "@/components/FlagshipEvent";
@@ -14,7 +15,8 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-black">
+    <main className="bg-black cursor-none md:cursor-none">
+      <CustomCursor />
       <Navigation />
       <Hero />
       <Thesis />

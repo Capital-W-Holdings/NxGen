@@ -5,124 +5,117 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-24">
+    <section className="relative min-h-screen flex flex-col overflow-hidden bg-black pt-24">
       {/* Top border line */}
       <div className="absolute top-20 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pearl/10 to-transparent" />
 
-      {/* Subtle animated gradient orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.02, 0.04, 0.02],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blush rounded-full blur-[200px]"
-        />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.015, 0.03, 0.015],
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-1/3 right-1/4 w-[700px] h-[700px] bg-pearl rounded-full blur-[200px]"
-        />
+      {/* Main content */}
+      <div className="flex-1 flex flex-col lg:flex-row">
+        {/* Left side - Text */}
+        <div className="flex-1 flex flex-col justify-center px-6 lg:px-12 xl:px-20 py-16 lg:py-0">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-[family-name:var(--font-playfair)] leading-[0.95] tracking-tight">
+              <span className="text-pearl">The future</span>
+              <br />
+              <span className="text-pearl">is </span>
+              <span className="text-blush italic">written</span>
+              <br />
+              <span className="text-pearl">together.</span>
+            </h1>
+          </motion.div>
+        </div>
+
+        {/* Right side - Grid */}
+        <div className="flex-1 relative hidden lg:block">
+          {/* Grid pattern */}
+          <div className="absolute inset-0 grid grid-cols-4 grid-rows-4">
+            {Array.from({ length: 16 }).map((_, i) => (
+              <div
+                key={i}
+                className="border-l border-t border-pearl/10 last:border-r"
+              />
+            ))}
+          </div>
+
+          {/* Circle indicator in grid */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <div className="w-12 h-12 rounded-full border border-pearl/30 flex items-center justify-center">
+              <div className="w-2 h-2 bg-pearl rounded-full" />
+            </div>
+          </motion.div>
+        </div>
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        {/* Date */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="text-xs tracking-[0.3em] text-pearl-muted mb-16"
-        >
-          NOVEMBER 5–8, 2026 · MIAMI
-        </motion.p>
-
-        {/* Main Logo */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-          className="mb-8"
-        >
-          <Image
-            src="/images/logo.png"
-            alt="NxGeN"
-            width={1200}
-            height={336}
-            className="h-64 md:h-96 lg:h-[32rem] w-auto mx-auto"
-            priority
-          />
-        </motion.div>
-
-        {/* Horizontal line */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="w-16 h-px bg-blush mx-auto mb-12"
-        />
-
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="text-2xl md:text-3xl text-pearl-muted mb-8 font-medium"
-        >
-          Where capital meets culture.
-        </motion.p>
-
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="text-base md:text-lg text-text-soft max-w-2xl mx-auto leading-relaxed mb-16"
-        >
-          The invitation-only community for next-generation leaders shaping the future of private capital, entrepreneurship, and impact.
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <a
-            href="#apply"
-            className="px-12 py-4 text-xs tracking-[0.2em] text-black bg-blush rounded-full hover:bg-pearl transition-all duration-500"
+      {/* Bottom section */}
+      <div className="border-t border-pearl/10">
+        <div className="flex flex-col md:flex-row items-stretch">
+          {/* Left - Description */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="flex-1 px-6 lg:px-12 xl:px-20 py-8 border-b md:border-b-0 md:border-r border-pearl/10"
           >
-            REQUEST AN INVITATION
-          </a>
-          <a
-            href="#thesis"
-            className="px-12 py-4 text-xs tracking-[0.2em] text-pearl border border-pearl/30 rounded-full hover:border-pearl/60 transition-all duration-300"
+            <p className="text-base md:text-lg text-pearl-muted max-w-md leading-relaxed">
+              As AI reshapes what it means to build, NxGen gives you the community, resources, and education to stay ahead — and lead with purpose.
+            </p>
+          </motion.div>
+
+          {/* Center - Scroll indicator */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="flex-1 flex flex-col items-center justify-center py-8 border-b md:border-b-0 md:border-r border-pearl/10"
           >
-            OUR VISION
-          </a>
-        </motion.div>
+            <span className="text-xs tracking-[0.3em] text-pearl-muted mb-4">SCROLL</span>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="w-px h-12 bg-gradient-to-b from-pearl/50 to-transparent"
+            />
+          </motion.div>
+
+          {/* Right - CTA */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="flex-1 flex items-center justify-end px-6 lg:px-12 xl:px-20 py-8"
+          >
+            <a
+              href="#apply"
+              className="group flex items-center gap-4 text-xs tracking-[0.2em] text-pearl hover:text-blush transition-colors"
+            >
+              BEGIN YOUR APPLICATION
+              <span className="w-10 h-10 rounded-full border border-pearl/30 flex items-center justify-center group-hover:border-blush transition-colors">
+                <svg
+                  className="w-4 h-4 -rotate-45"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </span>
+            </a>
+          </motion.div>
+        </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.4 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-px h-12 bg-gradient-to-b from-pearl/50 to-transparent"
-        />
-      </motion.div>
-
-      {/* Bottom border line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pearl/10 to-transparent" />
     </section>
   );
 }
