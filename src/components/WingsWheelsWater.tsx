@@ -57,63 +57,67 @@ export default function WingsWheelsWater() {
   return (
     <section id="www" className="relative bg-black overflow-hidden">
       {/* Content section */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-24">
-        {/* Intro - Two column layout with image on left, copy on right */}
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 mb-20 items-center">
-          {/* Left side - Image */}
-          <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-24 lg:py-32">
+        {/* Main two-column layout */}
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 mb-24">
+          {/* Left side - Image reframed to show helicopter */}
+          <div className="relative aspect-[4/3] lg:aspect-[3/4] rounded-lg overflow-hidden">
             <Image
               src="/images/helicopter-event.jpg"
               alt="Helicopter arriving at Wings Wheels Water event with private jet and vintage vehicles"
               fill
-              className="object-cover"
+              className="object-cover object-[center_20%]"
             />
           </div>
           
-          {/* Right side - Copy */}
-          <div>
-            <p className="text-blush text-xs tracking-[0.3em] uppercase mb-6">
+          {/* Right side - Headline + Wings/Wheels/Water descriptions */}
+          <div className="flex flex-col justify-center">
+            <p className="text-blush/80 text-[11px] tracking-[0.4em] uppercase mb-8 font-light">
               Flagship Event
             </p>
-            <h3 className="text-3xl md:text-4xl lg:text-5xl text-pearl leading-tight mb-8 font-bold">
-              Three worlds. One extraordinary night.
+            <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] text-pearl leading-[1.05] mb-8 font-serif font-light tracking-[-0.02em]">
+              Three worlds.
+              <br />
+              <span className="text-pearl/40">One extraordinary night.</span>
             </h3>
-            <p className="text-lg text-text-soft leading-relaxed">
-              Wings, Wheels & Water brings together private aviation, collector automobiles, and world-class yachts - all curated for the next generation of capital and culture. This is not a trade show. It&apos;s the opening act.
+            <p className="text-[1.05rem] text-pearl/50 leading-[1.8] mb-12 font-light max-w-lg">
+              Wings, Wheels & Water brings together private aviation, collector automobiles, and world-class yachts — all curated for the next generation of capital and culture. This is not a trade show. It&apos;s the opening act.
             </p>
+
+            {/* Wings/Wheels/Water stacked descriptions */}
+            <div className="space-y-8 border-t border-pearl/10 pt-10">
+              {experiences.map((exp, index) => (
+                <motion.div
+                  key={exp.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex gap-5 items-start group"
+                >
+                  <span className="text-pearl/40 text-xl mt-1 group-hover:text-blush transition-colors">{exp.icon}</span>
+                  <div>
+                    <h4 className="text-[1.25rem] text-pearl font-serif font-light mb-2 group-hover:text-blush transition-colors">
+                      {exp.label}
+                    </h4>
+                    <p className="text-[0.95rem] text-pearl/40 leading-[1.7] font-light">
+                      {exp.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-12">
+              <a
+                href="#apply"
+                className="inline-block px-10 py-4 text-[11px] tracking-[0.2em] text-black bg-blush hover:bg-pearl transition-all duration-300 font-medium"
+              >
+                SECURE YOUR PLACE
+              </a>
+            </div>
           </div>
-        </div>
-
-        {/* Experience cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={exp.label}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.15 }}
-              className="group"
-            >
-              <span className="text-3xl mb-6 block">{exp.icon}</span>
-              <h4 className="text-2xl text-pearl font-medium mb-4 group-hover:text-blush transition-colors">
-                {exp.label}
-              </h4>
-              <p className="text-text-soft leading-relaxed">
-                {exp.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <div>
-          <a
-            href="#apply"
-            className="inline-block px-10 py-4 text-xs tracking-[0.2em] text-black bg-blush rounded-full hover:bg-pearl transition-all duration-300"
-          >
-            SECURE YOUR PLACE
-          </a>
         </div>
       </div>
 
