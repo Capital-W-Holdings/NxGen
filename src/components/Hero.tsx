@@ -1,54 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden bg-black pt-24">
-      {/* Top border line */}
-      <div className="absolute top-20 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pearl/10 to-transparent" />
+    <section className="relative min-h-screen flex flex-col overflow-hidden pt-24">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/gallery/marina-sunset.jpg"
+          alt="NxGen Event at Steel Point Marina"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
 
       {/* Main content */}
-      <div className="flex-1 flex items-center justify-center px-6 lg:px-12 xl:px-20 py-16">
+      <div className="relative z-10 flex-1 flex items-center justify-center px-6 lg:px-12 xl:px-20 py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+            className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-serif font-light leading-[0.95] tracking-[-0.02em]">
-              <span className="text-pearl">The future</span>
-              <br />
-              <span className="text-pearl">is </span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-light leading-[1.1] tracking-[-0.02em] whitespace-nowrap">
+              <span className="text-pearl">The future is </span>
               <span className="text-blush italic font-normal">written</span>
-              <br />
-              <span className="text-pearl">together.</span>
+              <span className="text-pearl"> together.</span>
             </h1>
           </motion.div>
       </div>
 
       {/* Bottom section */}
-      <div className="border-t border-pearl/10">
+      <div className="relative z-10 border-t border-pearl/20 bg-black/40 backdrop-blur-sm">
         <div className="flex flex-col md:flex-row items-stretch">
-          {/* Left - Description */}
+          {/* Left - Scroll indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="flex-1 px-6 lg:px-12 xl:px-20 py-8 border-b md:border-b-0 md:border-r border-pearl/10"
+            className="flex-1 flex flex-col items-center justify-center py-8 border-b md:border-b-0 md:border-r border-pearl/20"
           >
-            <p className="text-[0.95rem] md:text-[1.05rem] text-pearl/50 max-w-md leading-[1.8] font-light">
-              As AI reshapes what it means to build, NxGen gives you the community, resources, and education to stay ahead — and lead with purpose.
-            </p>
-          </motion.div>
-
-          {/* Center - Scroll indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="flex-1 flex flex-col items-center justify-center py-8 border-b md:border-b-0 md:border-r border-pearl/10"
-          >
-            <span className="text-xs tracking-[0.3em] text-pearl-muted mb-4">SCROLL</span>
+            <span className="text-xs tracking-[0.3em] text-pearl/70 mb-4">SCROLL</span>
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -60,8 +57,8 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="flex-1 flex items-center justify-end px-6 lg:px-12 xl:px-20 py-8"
+            transition={{ duration: 1, delay: 0.8 }}
+            className="flex-1 flex items-center justify-center md:justify-end px-6 lg:px-12 xl:px-20 py-8"
           >
             <a
               href="#apply"
