@@ -3,15 +3,15 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+// Mixed order to avoid repetitive patterns - removed speedboat as it's similar to header
 const heroImages = [
-  { src: "/images/event-poker.jpg", alt: "Poker night event" },
-  { src: "/images/event-yacht-marina.jpg", alt: "Yacht marina sunset" },
-  { src: "/images/event-panel.jpg", alt: "Panel discussion" },
-  { src: "/images/event-speedboat.jpg", alt: "Classic speedboat" },
   { src: "/images/event-lounge.jpg", alt: "Members in lounge" },
-  { src: "/images/event-panel-bw.jpg", alt: "Panel speakers" },
+  { src: "/images/event-poker.jpg", alt: "Poker night event" },
   { src: "/images/event-rooftop-group.jpg", alt: "Rooftop gathering" },
+  { src: "/images/event-panel.jpg", alt: "Panel discussion" },
   { src: "/images/event-empire.jpg", alt: "NYC rooftop event" },
+  { src: "/images/event-panel-bw.jpg", alt: "Panel speakers" },
+  { src: "/images/event-yacht-marina.jpg", alt: "Yacht marina sunset" },
 ];
 
 export default function Hero() {
@@ -58,11 +58,11 @@ export default function Hero() {
         <motion.div
           className="flex gap-4"
           animate={{
-            x: [0, -1920],
+            x: [0, -1680],
           }}
           transition={{
             x: {
-              duration: 30,
+              duration: 60,
               repeat: Infinity,
               ease: "linear",
             },
