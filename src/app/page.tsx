@@ -20,12 +20,12 @@ export default function Home() {
       <CustomCursor />
       <Navigation />
       <Hero />
-      <ImageMarquee />
       <Thesis />
       <FlagshipEvent />
       <WingsWheelsWater />
       <Pillars />
       <WhoWeAre />
+      <ImageMarquee />
       <Destinations />
       <WhatYouGet />
       <Process />
