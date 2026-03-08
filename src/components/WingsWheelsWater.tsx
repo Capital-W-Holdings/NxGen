@@ -45,17 +45,25 @@ export default function WingsWheelsWater() {
 
       {/* Content section */}
       <div className="max-w-6xl mx-auto px-6 lg:px-12 py-24">
-        {/* Intro */}
-        <div className="max-w-3xl mb-20">
-          <p className="text-blush text-xs tracking-[0.3em] uppercase mb-6">
-            The Experience
-          </p>
-          <h3 className="text-3xl md:text-4xl lg:text-5xl text-pearl leading-tight mb-8 font-bold">
-            Three worlds. One extraordinary night.
-          </h3>
-          <p className="text-lg text-text-soft leading-relaxed">
-            NxGeN opens its flagship Miami experience at the water&apos;s edge. Wings, Wheels & Water brings together private aviation, collector automobiles, and world-class yachts - all curated for the next generation of capital and culture. This is not a trade show. It&apos;s the opening act.
-          </p>
+        {/* Intro - Two column layout with image placeholder on left, copy on right */}
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 mb-20 items-center">
+          {/* Left side - Image placeholder */}
+          <div className="aspect-[4/3] bg-black-light rounded-lg flex items-center justify-center border border-pearl/10">
+            <span className="text-pearl/30 text-sm tracking-wider">Image Coming Soon</span>
+          </div>
+          
+          {/* Right side - Copy */}
+          <div>
+            <p className="text-blush text-xs tracking-[0.3em] uppercase mb-6">
+              The Experience
+            </p>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl text-pearl leading-tight mb-8 font-bold">
+              Three worlds. One extraordinary night.
+            </h3>
+            <p className="text-lg text-text-soft leading-relaxed">
+              Wings, Wheels & Water brings together private aviation, collector automobiles, and world-class yachts - all curated for the next generation of capital and culture. This is not a trade show. It&apos;s the opening act.
+            </p>
+          </div>
         </div>
 
         {/* Experience cards */}
