@@ -10,17 +10,20 @@ export default function WhoWeAre() {
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
+  const y = useTransform(scrollYProgress, [0, 1], [80, -80]);
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   return (
-    <section ref={containerRef} className="relative py-40 bg-black overflow-hidden">
+    <section ref={containerRef} className="relative py-40 bg-black-light overflow-hidden">
       {/* Large background text */}
       <motion.div
         style={{ y }}
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
       >
-        <span className="text-[20vw] font-bold text-pearl/[0.02] whitespace-nowrap">
+        <span
+          className="text-[20vw] text-pearl/[0.02] whitespace-nowrap"
+          style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
+        >
           NXGEN
         </span>
       </motion.div>
@@ -33,28 +36,29 @@ export default function WhoWeAre() {
           Who We Are
         </p>
 
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-pearl leading-tight mb-12">
+        <h2
+          className="text-3xl md:text-5xl lg:text-6xl text-pearl leading-tight mb-12"
+          style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
+        >
           Not a network you attend.
           <br />
-          <span className="text-pearl-muted">A community you belong to.</span>
+          <span className="text-pearl-muted">A global community you belong to.</span>
         </h2>
 
         <p className="text-lg text-text-soft leading-relaxed max-w-2xl mx-auto mb-16">
-          We create the experiences for trust to grow, value to compound, and
-          friendship to form between people who are trying to leave the world
-          better than they found it.
+          NxGeN brings together people who are building the future of their industries, investing in the people and ideas that matter most, and giving generously to lift others. We don&apos;t just connect people - we create the experiences for trust to grow, value to compound, and friendship to form between people who are trying to leave the world a better place than they found it.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <a
             href="#apply"
-            className="px-8 py-3 text-sm tracking-widest text-black bg-pearl rounded-full hover:bg-blush transition-all duration-300"
+            className="px-10 py-4 text-xs tracking-[0.2em] text-black bg-blush rounded-full hover:bg-pearl transition-all duration-300"
           >
             APPLY TO JOIN
           </a>
           <a
             href="#thesis"
-            className="px-8 py-3 text-sm tracking-widest text-pearl border border-pearl/20 rounded-full hover:border-pearl/40 transition-all duration-300"
+            className="px-10 py-4 text-xs tracking-[0.2em] text-pearl border border-pearl/20 rounded-full hover:border-pearl/40 transition-all duration-300"
           >
             OUR STORY
           </a>

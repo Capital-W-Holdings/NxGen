@@ -5,24 +5,28 @@ import { useRef } from "react";
 
 const schedule = [
   {
-    day: "THU",
-    title: "Wings, Wheels & Water",
-    description: "Private aviation, exotic cars, yachts, live entertainment.",
+    day: "THURSDAY",
+    title: "Opening Night",
+    subtitle: "Wings, Wheels & Water",
+    description: "Private aviation, exotic cars, beautiful yachts, and live entertainment.",
   },
   {
-    day: "FRI",
+    day: "FRIDAY",
     title: "Build, Invest, Give",
-    description: "Panels, keynotes, breakouts. Evening: Diamond District Gala.",
+    subtitle: "NextGen panels, keynote speakers, & breakout sessions",
+    description: "Evening: Diamond District - Diamonds Last Forever Impact Gala.",
   },
   {
-    day: "SAT",
+    day: "SATURDAY",
     title: "Play & Compete",
-    description: "Golf, padel, whiskey & watches, poker championship.",
+    subtitle: "Golf and padel tournaments",
+    description: "Whiskey & Watches, culinary experience. Poker championship finals.",
   },
   {
-    day: "SUN",
+    day: "SUNDAY",
     title: "Until Next Time",
-    description: "Intimate closing brunch. Reveal next summit location.",
+    subtitle: "Intimate closing brunch",
+    description: "Shape the future of NxGeN together. Reveal next summit location.",
   },
 ];
 
@@ -33,71 +37,64 @@ export default function FlagshipEvent() {
     offset: ["start end", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.95, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
     <section
+      id="miami"
       ref={containerRef}
-      className="relative min-h-screen py-32 bg-black-light"
+      className="relative py-32 bg-black-light"
     >
       {/* Top border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pearl/10 to-transparent" />
 
       <motion.div
-        style={{ scale, opacity }}
-        className="max-w-7xl mx-auto px-6 lg:px-12"
+        style={{ opacity }}
+        className="max-w-6xl mx-auto px-6 lg:px-12"
       >
         {/* Header */}
-        <div className="text-center mb-24">
-          <p className="text-blush text-xs tracking-[0.3em] uppercase mb-6">
+        <div className="text-center mb-20">
+          <p className="text-blush text-xs tracking-[0.3em] uppercase mb-8">
             Flagship Event
           </p>
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-pearl tracking-tight">
+          <h2
+            className="text-5xl md:text-7xl lg:text-8xl text-pearl mb-6"
+            style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
+          >
             NxGeN Miami
           </h2>
-          <p className="mt-6 text-xl text-pearl-muted">November 5–8, 2026</p>
+          <p className="text-xl text-pearl-muted tracking-wide">
+            November 5–8, 2026
+          </p>
         </div>
 
-        {/* Stats row */}
-        <div className="flex justify-center gap-16 mb-24">
-          <div className="text-center">
-            <p className="text-4xl md:text-5xl font-light text-pearl">4</p>
-            <p className="text-sm text-text-muted uppercase tracking-widest mt-2">
-              Days
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-4xl md:text-5xl font-light text-pearl">100</p>
-            <p className="text-sm text-text-muted uppercase tracking-widest mt-2">
-              Curated Attendees
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-4xl md:text-5xl font-light text-pearl">∞</p>
-            <p className="text-sm text-text-muted uppercase tracking-widest mt-2">
-              Connections
-            </p>
-          </div>
+        {/* Subtitle */}
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-lg text-text-soft leading-relaxed">
+            Four days. 100 curated attendees. Unbelievable experiences. Meaningful conversations. Lasting friendships.
+          </p>
         </div>
 
         {/* Schedule grid */}
-        <div className="grid md:grid-cols-4 gap-px bg-pearl/5 rounded-2xl overflow-hidden">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {schedule.map((item, index) => (
             <motion.div
               key={item.day}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-black-light p-8 hover:bg-black-mid transition-colors duration-500 group"
+              className="bg-black/50 border border-pearl/5 rounded-xl p-8 hover:border-blush/20 transition-all duration-500 group"
             >
               <p className="text-blush text-xs tracking-[0.2em] mb-4">
                 {item.day}
               </p>
-              <h3 className="text-xl text-pearl font-medium mb-3 group-hover:text-blush transition-colors">
+              <h3 className="text-xl text-pearl font-medium mb-2 group-hover:text-blush transition-colors">
                 {item.title}
               </h3>
+              <p className="text-sm text-pearl-muted mb-3">
+                {item.subtitle}
+              </p>
               <p className="text-sm text-text-soft leading-relaxed">
                 {item.description}
               </p>
@@ -109,7 +106,7 @@ export default function FlagshipEvent() {
         <div className="text-center mt-16">
           <a
             href="#apply"
-            className="inline-block px-8 py-3 text-sm tracking-widest text-pearl border border-pearl/20 rounded-full hover:border-blush hover:text-blush transition-all duration-300"
+            className="inline-block px-10 py-4 text-xs tracking-[0.2em] text-pearl border border-pearl/20 rounded-full hover:border-blush hover:text-blush transition-all duration-300"
           >
             SECURE YOUR PLACE
           </a>

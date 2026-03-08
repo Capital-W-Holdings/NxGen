@@ -7,51 +7,60 @@ const footerLinks = {
   community: [
     { name: "About NxGeN", href: "#thesis" },
     { name: "Our Pillars", href: "#community" },
-    { name: "Events", href: "#events" },
+    { name: "Community Voices", href: "#testimonials" },
+    { name: "Events", href: "#miami" },
   ],
   getInvolved: [
     { name: "Apply to Join", href: "#apply" },
+    { name: "What's Included", href: "#whatyouget" },
     { name: "FAQs", href: "#" },
     { name: "Contact Us", href: "mailto:team@nxgen.club" },
+  ],
+  media: [
+    { name: "NxGeN Podcast", href: "#" },
+    { name: "Newsletter", href: "#" },
+    { name: "Resources", href: "#" },
+    { name: "Press", href: "#" },
   ],
 };
 
 const socials = [
-  { icon: Instagram, href: "https://www.instagram.com/nxgen.club/" },
-  { icon: Linkedin, href: "https://www.linkedin.com/company/nxgenclub" },
+  { icon: Instagram, href: "https://www.instagram.com/nxgen.club/", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/nxgenclub", label: "LinkedIn" },
 ];
 
 export default function Footer() {
   return (
     <footer className="relative py-20 bg-black border-t border-pearl/5">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
+        <div className="grid md:grid-cols-5 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-2">
             <motion.h3
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-3xl font-bold text-pearl mb-4"
+              className="text-2xl mb-6"
+              style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
             >
-              NxGeN
+              NxGen
             </motion.h3>
-            <p className="text-text-soft text-sm leading-relaxed max-w-sm">
-              A community of builders, givers, and investors leading the next
-              generation—with purpose, generosity, and care.
+            <p className="text-text-soft text-sm leading-relaxed max-w-sm mb-8">
+              A community of builders, givers, and investors leading the next generation of society - with purpose, generosity, and care.
             </p>
 
             {/* Socials */}
-            <div className="flex gap-4 mt-8">
-              {socials.map((social, index) => (
+            <div className="flex gap-4">
+              {socials.map((social) => (
                 <a
-                  key={index}
+                  key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black-light border border-pearl/10 flex items-center justify-center hover:border-blush/30 hover:text-blush transition-all duration-300"
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-full bg-black-light border border-pearl/10 flex items-center justify-center hover:border-blush/30 transition-all duration-300 group"
                 >
-                  <social.icon size={18} className="text-pearl-muted" />
+                  <social.icon size={16} className="text-text-muted group-hover:text-blush transition-colors" />
                 </a>
               ))}
             </div>
@@ -94,6 +103,25 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* Media links */}
+          <div>
+            <p className="text-xs text-text-muted uppercase tracking-widest mb-6">
+              Media
+            </p>
+            <ul className="space-y-3">
+              {footerLinks.media.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-pearl-muted hover:text-pearl transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Bottom bar */}
@@ -101,8 +129,8 @@ export default function Footer() {
           <p className="text-xs text-text-muted">
             © 2025 NxGeN. All rights reserved.
           </p>
-          <p className="text-xs text-blush">
-            November 5–8, 2026 · Miami
+          <p className="text-xs text-blush tracking-wide">
+            NOVEMBER 5–8, 2026 · MIAMI
           </p>
         </div>
       </div>

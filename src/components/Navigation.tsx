@@ -17,6 +17,9 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
+    { name: "VISION", href: "#thesis" },
+    { name: "MIAMI", href: "#miami" },
+    { name: "WWW", href: "#www" },
     { name: "COMMUNITY", href: "#community" },
     { name: "APPLY", href: "#apply" },
   ];
@@ -29,34 +32,30 @@ export default function Navigation() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-black/80 backdrop-blur-lg border-b border-divider"
+            ? "bg-black/90 backdrop-blur-lg border-b border-divider"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-2">
-              <span className="text-2xl font-bold tracking-tight text-pearl">
-                NxGeN
+            <a href="#" className="flex items-center">
+              <span className="text-xl tracking-[0.2em] text-pearl font-light" style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}>
+                NxGen
               </span>
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-10">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm font-medium text-pearl-muted hover:text-pearl tracking-widest transition-colors"
+                  className="text-xs font-normal text-pearl-muted hover:text-pearl tracking-[0.2em] transition-colors"
                 >
                   {link.name}
                 </a>
               ))}
-              <span className="text-text-muted text-sm">·</span>
-              <span className="text-sm text-blush font-medium tracking-wide">
-                NOVEMBER 5–8, 2026 · MIAMI
-              </span>
             </div>
 
             {/* Mobile Menu Button */}
@@ -86,16 +85,11 @@ export default function Navigation() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-2xl font-medium text-pearl hover:text-blush transition-colors"
+                  className="text-2xl font-light text-pearl hover:text-blush transition-colors tracking-widest"
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="mt-8 pt-8 border-t border-divider">
-                <span className="text-blush text-lg">
-                  NOVEMBER 5–8, 2026 · MIAMI
-                </span>
-              </div>
             </div>
           </motion.div>
         )}
