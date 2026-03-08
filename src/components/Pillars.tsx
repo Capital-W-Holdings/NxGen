@@ -46,10 +46,7 @@ export default function Pillars() {
             <p className="text-blush text-xs tracking-[0.3em] uppercase mb-6">
               The People
             </p>
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl text-pearl leading-tight mb-6"
-              style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-            >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-pearl leading-tight mb-6 font-bold">
               Meet your neighbors.
             </h2>
             <p className="text-lg text-text-soft leading-relaxed">
@@ -78,10 +75,7 @@ export default function Pillars() {
         <p className="text-blush text-xs tracking-[0.3em] uppercase mb-8">
           Our Three Pillars
         </p>
-        <h3
-          className="text-2xl md:text-3xl text-pearl mb-12"
-          style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-        >
+        <h3 className="text-2xl md:text-3xl text-pearl mb-12 font-bold">
           Three ways to live it. One platform to experience it together.
         </h3>
 

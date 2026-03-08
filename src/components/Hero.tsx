@@ -65,13 +65,12 @@ export default function Hero() {
           className="w-16 h-px bg-blush mx-auto mb-12"
         />
 
-        {/* Tagline - Italic */}
+        {/* Tagline */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="text-2xl md:text-3xl text-pearl-muted mb-8 italic"
-          style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+          className="text-2xl md:text-3xl text-pearl-muted mb-8 font-medium"
         >
           Where capital meets culture.
         </motion.p>

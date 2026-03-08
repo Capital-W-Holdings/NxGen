@@ -33,10 +33,7 @@ export default function WingsWheelsWater() {
           <p className="text-pearl/60 text-xs tracking-[0.3em] uppercase mb-8">
             Opening Night · Thursday November 5
           </p>
-          <h2
-            className="text-5xl md:text-7xl lg:text-8xl text-pearl uppercase tracking-wider leading-tight"
-            style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-          >
+          <h2 className="text-5xl md:text-7xl lg:text-8xl text-pearl uppercase tracking-wider leading-tight font-bold">
             Wings
             <br />
             Wheels
@@ -53,10 +50,7 @@ export default function WingsWheelsWater() {
           <p className="text-blush text-xs tracking-[0.3em] uppercase mb-6">
             The Experience
           </p>
-          <h3
-            className="text-3xl md:text-4xl lg:text-5xl text-pearl leading-tight mb-8"
-            style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-          >
+          <h3 className="text-3xl md:text-4xl lg:text-5xl text-pearl leading-tight mb-8 font-bold">
             Three worlds. One extraordinary night.
           </h3>
           <p className="text-lg text-text-soft leading-relaxed">

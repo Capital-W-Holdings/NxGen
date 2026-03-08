@@ -67,10 +67,7 @@ export default function Destinations() {
 
       {/* Quote */}
       <div className="max-w-4xl mx-auto px-6 lg:px-12 mt-20 text-center">
-        <blockquote
-          className="text-2xl md:text-3xl text-pearl leading-relaxed italic"
-          style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
-        >
+        <blockquote className="text-2xl md:text-3xl text-pearl leading-relaxed font-medium">
           &ldquo;We&apos;re not building a network. We&apos;re building a global ecosystem that moves humanity forward for generations to come.&rdquo;
         </blockquote>
       </div>

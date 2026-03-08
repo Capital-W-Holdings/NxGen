@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const schedule = [
   {
@@ -57,12 +58,19 @@ export default function FlagshipEvent() {
           <p className="text-blush text-xs tracking-[0.3em] uppercase mb-8">
             Flagship Event
           </p>
-          <h2
-            className="text-5xl md:text-7xl lg:text-8xl text-pearl mb-6"
-            style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-          >
-            NxGeN Miami
-          </h2>
+          {/* Logo + Miami */}
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <Image
+              src="/images/logo.png"
+              alt="NxGeN"
+              width={280}
+              height={78}
+              className="h-14 md:h-20 lg:h-24 w-auto"
+            />
+            <span className="text-5xl md:text-7xl lg:text-8xl text-pearl font-bold tracking-tight">
+              Miami
+            </span>
+          </div>
           <p className="text-xl text-pearl-muted tracking-wide">
             November 5–8, 2026
           </p>
@@ -89,7 +97,7 @@ export default function FlagshipEvent() {
               <p className="text-blush text-xs tracking-[0.2em] mb-4">
                 {item.day}
               </p>
-              <h3 className="text-xl text-pearl font-medium mb-2 group-hover:text-blush transition-colors">
+              <h3 className="text-xl text-pearl font-bold mb-2 group-hover:text-blush transition-colors">
                 {item.title}
               </h3>
               <p className="text-sm text-pearl-muted mb-3">

@@ -41,10 +41,7 @@ export default function WhatYouGet() {
           <p className="text-blush text-xs tracking-[0.3em] uppercase mb-6">
             What You Get
           </p>
-          <h2
-            className="text-3xl md:text-4xl text-pearl"
-            style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-          >
+          <h2 className="text-3xl md:text-4xl text-pearl font-bold">
             Built for people who want to go deeper.
           </h2>
         </div>

@@ -56,10 +56,7 @@ export default function Testimonials() {
               transition={{ duration: 0.5 }}
               className="text-center"
             >
-              <blockquote
-                className="text-2xl md:text-3xl lg:text-4xl text-pearl leading-relaxed max-w-4xl mb-12 italic"
-                style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-              >
+              <blockquote className="text-2xl md:text-3xl lg:text-4xl text-pearl leading-relaxed max-w-4xl mb-12 font-medium">
                 &ldquo;{testimonials[activeIndex].quote}&rdquo;
               </blockquote>
 

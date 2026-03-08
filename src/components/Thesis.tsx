@@ -27,10 +27,7 @@ export default function Thesis() {
           </p>
 
           {/* Main headline */}
-          <h2
-            className="text-4xl md:text-5xl lg:text-6xl text-pearl leading-[1.15] max-w-4xl"
-            style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-          >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-pearl leading-[1.15] max-w-4xl font-bold">
             The weight of responsibility is shifting
           </h2>
 
@@ -55,10 +52,7 @@ export default function Thesis() {
             <p className="text-xl text-pearl leading-relaxed max-w-3xl">
               <span className="font-medium">NxGeN</span> is the platform bringing this global community together, in real life, to have fun, safe spaces to build the relationships and have the conversations that matter most.
             </p>
-            <p
-              className="text-3xl md:text-4xl text-blush mt-8"
-              style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300, fontStyle: 'italic' }}
-            >
+            <p className="text-3xl md:text-4xl text-blush mt-8 font-bold">
               It starts in Miami.
             </p>
           </div>

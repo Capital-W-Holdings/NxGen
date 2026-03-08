@@ -20,10 +20,7 @@ export default function WhoWeAre() {
         style={{ y }}
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
       >
-        <span
-          className="text-[20vw] text-pearl/[0.02] whitespace-nowrap"
-          style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-        >
+        <span className="text-[20vw] text-pearl/[0.02] whitespace-nowrap font-bold">
           NXGEN
         </span>
       </motion.div>
@@ -36,10 +33,7 @@ export default function WhoWeAre() {
           Who We Are
         </p>
 
-        <h2
-          className="text-3xl md:text-5xl lg:text-6xl text-pearl leading-tight mb-12"
-          style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-        >
+        <h2 className="text-3xl md:text-5xl lg:text-6xl text-pearl leading-tight mb-12 font-bold">
           Not a network you attend.
           <br />
           <span className="text-pearl-muted">A global community you belong to.</span>

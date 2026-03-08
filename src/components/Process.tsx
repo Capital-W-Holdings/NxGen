@@ -40,10 +40,7 @@ export default function Process() {
           <p className="text-blush text-xs tracking-[0.3em] uppercase mb-6">
             The Process
           </p>
-          <h2
-            className="text-3xl md:text-4xl text-pearl mb-6"
-            style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 300 }}
-          >
+          <h2 className="text-3xl md:text-4xl text-pearl mb-6 font-bold">
             Access is earned, not bought.
           </h2>
           <p className="text-lg text-text-soft max-w-2xl mx-auto">
